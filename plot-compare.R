@@ -17,5 +17,5 @@ sourmash_comp_matrix <- read.csv(mat_csv)
 rownames(sourmash_comp_matrix) <- colnames(sourmash_comp_matrix)
 
 # make heatmap!
-heatmap_gg <- as.ggplot(pheatmap(sourmash_comp_matrix, color=inferno(10)))
+heatmap_gg <- as.ggplot(pheatmap(sourmash_comp_matrix, color=inferno(10), cellwidth=10, cellheight=10, fontsize_row=5, fontsize_col=5))
 ggsave(out_fig, device=pdf) #, device="pdf"
