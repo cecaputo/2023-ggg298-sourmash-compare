@@ -27,5 +27,5 @@ rownames(sourmash_comp_matrix) <- colnames(sourmash_comp_matrix)
 ### Make a heatmap
 
 ```{r pheatmap}
-heatmap_gg <- as.ggplot(pheatmap(sourmash_comp_matrix))
+heatmap_gg <- as.ggplot(pheatmap(sourmash_comp_matrix, color=inferno(10)))
 ```
