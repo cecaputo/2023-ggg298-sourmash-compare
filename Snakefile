@@ -10,7 +10,7 @@ genome_urls = {
 
 rule all:
     input:
-        "compare.mat.matrix.png",
+        "compare.mat.matrix.pdf",
         "compare.rstats.pdf",
         "show-compare.html",
 
@@ -55,10 +55,10 @@ rule plot_comparison:
     input:
         matrix = "compare.mat"
     output:
-        "compare.mat.matrix.png"
+        "compare.mat.matrix.pdf"
     conda: "envs/sourmash.yml"
     shell: """
-        sourmash plot {input} --labels
+        sourmash plot {input} --labels --pdf
     """
 
 rule plot_comparison_rstats:
